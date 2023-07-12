@@ -25,7 +25,8 @@ Here is a 8-step data cleaning process that will help you prepare your data:
 
 ### My Project Work Step by Step.
 1. LOAD Data From Dataset to Database using IMPORT data wizard of MS SQL Server. This dataset is for Nashville Husing Details.
-2.  Start Cleaning Process:
+
+2. Cleaning Process:
    * In the data table SaleDate column contained DateTime(Like 2020-06-13 00:00:00) format. Since the time part is 00:00:00 in all the         values so remove the time part and save the column as SaleDateConvert as only Date format. Code location         SQLCODE/Nashville_Date_CleanTransform_SQL.sql
    *  In the Property Address field many values ar NULL after looking some data I can understand that those NULL values can be replaced by PropertyAddress of same PercelId PropertyAddress. So I replaced the NULL values. Code location SQLCODE/Nashville_PropertyAddress_CleanTransform_SQL.sql
    *  In the PropertyAddress and OwnerAddress the values are all together like "address,city,state". Split the data into three part "Address","City","State" for both PropertyAddress and OwnerAddress Values. Code location SQLCODE/Nashville_Address_Transform.sql

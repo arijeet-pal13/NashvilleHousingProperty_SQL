@@ -2,8 +2,6 @@
 -- Remove Duplicate values
 
 
-
-
 WITH RowNumberCTE AS
 (
 SELECT *,
